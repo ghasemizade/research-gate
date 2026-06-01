@@ -66,7 +66,7 @@ export function MetricsVisualization({ isActive }: { isActive: boolean }) {
       >
         <h3 className="text-lg font-semibold text-primary mb-6">Performance Metrics Comparison</h3>
         <ResponsiveContainer width="100%" height={240}>
-          <BarChart data={accuracyData} margin={{ top: 20, right: 30, left: 0, bottom: 20 }}>
+          <BarChart data={accuracyData} margin={{ top: 0, right: 30, left: 20, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="rgba(100, 150, 255, 0.1)" />
             <XAxis dataKey="metric" tick={{ fill: 'rgba(200, 200, 220, 0.7)', fontSize: 12 }} />
             <YAxis tick={{ fill: 'rgba(200, 200, 220, 0.7)', fontSize: 12 }} domain={[0, 1]} />
@@ -102,8 +102,8 @@ export function MetricsVisualization({ isActive }: { isActive: boolean }) {
         className="bg-linear-to-br from-accent/5 to-secondary/5 border border-accent/20 rounded-lg p-6 backdrop-blur-sm"
       >
         <h3 className="text-lg font-semibold text-accent mb-6">ROC Curve Analysis</h3>
-        <ResponsiveContainer width="100%" height={200}>
-          <LineChart data={rocData} margin={{ top: 20, right: 30, left: 0, bottom: 20 }}>
+        <ResponsiveContainer width="100%" height={240}>
+          <LineChart data={rocData} margin={{ top: 10, right: 30, left: 10, bottom: 10 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="rgba(100, 150, 255, 0.1)" />
             <XAxis
               dataKey="fpr"
@@ -166,7 +166,7 @@ export function MetricsVisualization({ isActive }: { isActive: boolean }) {
       </div>
 
       {/* Hardware Performance */}
-      <motion.div
+      {/* <motion.div
         variants={itemVariants}
         className="bg-linear-to-r from-secondary/10 to-primary/10 border border-secondary/30 rounded-lg p-6 backdrop-blur-sm"
       >
@@ -185,7 +185,7 @@ export function MetricsVisualization({ isActive }: { isActive: boolean }) {
             </div>
           ))}
         </div>
-      </motion.div>
+      </motion.div> */}
     </motion.div>
   )
 }

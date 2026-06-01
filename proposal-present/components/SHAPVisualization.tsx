@@ -59,8 +59,8 @@ export function SHAPVisualization({ isActive }: { isActive: boolean }) {
         className="bg-linear-to-br from-primary/5 to-accent/5 border border-primary/20 rounded-lg p-6 backdrop-blur-sm"
       >
         <h3 className="text-lg font-semibold text-primary mb-6">Top Attack Detection Features</h3>
-        <ResponsiveContainer width="100%" height={200}>
-          <BarChart data={featureImportance} margin={{ top: 10, right: 30, left: 0, bottom: 30 }}>
+        <ResponsiveContainer width="100%" height={240}>
+          <BarChart data={featureImportance} margin={{ top: 0, right: 30, left: 0, bottom: 30 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="rgba(100, 150, 255, 0.1)" />
             <XAxis
               dataKey="feature"
