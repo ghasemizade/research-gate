@@ -54,7 +54,7 @@ export function MetricsVisualization({ isActive }: { isActive: boolean }) {
 
   return (
     <motion.div
-      className="w-full space-y-4"
+      className="w-full space-y-4 transform scale-95 "
       initial={false}
       animate={isActive ? 'visible' : 'hidden'}
       variants={containerVariants}
