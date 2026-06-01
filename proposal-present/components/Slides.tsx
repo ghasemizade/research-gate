@@ -26,9 +26,16 @@ export function TitleSlide({ isActive }: { isActive: boolean }) {
           {slide.content}
         </p>
         <div className="pt-8">
-          <div className="inline-block px-8 py-3 bg-primary/20 rounded-lg border border-primary/50 backdrop-blur-sm">
-            <p className="text-primary text-sm font-semibold tracking-widest">FEDERATED LEARNING RESEARCH</p>
+          <div className="text-left inline-block px-8 py-3 bg-primary/20 rounded-lg border border-primary/50 backdrop-blur-sm">
+            <p className="text-foreground/80 text-lg font-semibold tracking-widest">
+              <span className="font-semibold text-secondary">Student:</span> Hosein Ghasemizade
+            </p>
+            <p className="text-lg text-foreground/80 font-semibold tracking-widest mt-2">
+              <span className="font-semibold text-secondary">Professor:</span> Dr. Azita Shirazipour<br />
+              <span className="font-semibold text-secondary">Affiliation:</span> University of Centeral Tehran Branch<br />
+            </p>
           </div>
+
         </div>
       </div>
     </SlideLayout>
@@ -123,7 +130,7 @@ export function ExplainabilitySlide({ isActive }: { isActive: boolean }) {
       <div className="max-w-5xl w-full space-y-8">
         <div>
           <h2 className="text-5xl md:text-6xl font-bold text-primary mb-4">{slide.title}</h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-accent to-secondary rounded-full" />
+          <div className="h-1 w-24 bg-linear-to-r from-accent to-secondary rounded-full" />
         </div>
         <SHAPVisualization isActive={isActive} />
       </div>
@@ -170,7 +177,7 @@ export function EndSlide({ isActive }: { isActive: boolean }) {
           <h1 className="text-7xl md:text-8xl font-bold text-primary">{slide.title}</h1>
           <p className="text-3xl md:text-4xl text-accent font-semibold">{slide.subtitle}</p>
         </div>
-        <div className="h-1 w-32 bg-gradient-to-r from-accent via-primary to-secondary rounded-full mx-auto" />
+        <div className="h-1 w-32 bg-linear-to-r from-accent via-primary to-secondary rounded-full mx-auto" />
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
           {slide.content}
         </p>

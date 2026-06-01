@@ -47,7 +47,7 @@ export function SlideLayout({ children, slideNumber, isActive }: SlideLayoutProp
           }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-gradient-to-l from-accent/5 to-secondary/10 blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-linear-to-l from-accent/5 to-secondary/10 blur-3xl"
           animate={{
             opacity: [0.2, 0.5, 0.2],
             scale: [1, 1.15, 1],

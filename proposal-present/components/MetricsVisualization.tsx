@@ -54,7 +54,7 @@ export function MetricsVisualization({ isActive }: { isActive: boolean }) {
 
   return (
     <motion.div
-      className="w-full space-y-8"
+      className="w-full space-y-4"
       initial={false}
       animate={isActive ? 'visible' : 'hidden'}
       variants={containerVariants}
@@ -62,10 +62,10 @@ export function MetricsVisualization({ isActive }: { isActive: boolean }) {
       {/* Accuracy Comparison Chart */}
       <motion.div
         variants={itemVariants}
-        className="bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/20 rounded-lg p-6 backdrop-blur-sm"
+        className="bg-linear-to-br from-primary/5 to-accent/5 border border-primary/20 rounded-lg p-6 backdrop-blur-sm"
       >
         <h3 className="text-lg font-semibold text-primary mb-6">Performance Metrics Comparison</h3>
-        <ResponsiveContainer width="100%" height={280}>
+        <ResponsiveContainer width="100%" height={240}>
           <BarChart data={accuracyData} margin={{ top: 20, right: 30, left: 0, bottom: 20 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="rgba(100, 150, 255, 0.1)" />
             <XAxis dataKey="metric" tick={{ fill: 'rgba(200, 200, 220, 0.7)', fontSize: 12 }} />
@@ -99,10 +99,10 @@ export function MetricsVisualization({ isActive }: { isActive: boolean }) {
       {/* ROC Curve */}
       <motion.div
         variants={itemVariants}
-        className="bg-gradient-to-br from-accent/5 to-secondary/5 border border-accent/20 rounded-lg p-6 backdrop-blur-sm"
+        className="bg-linear-to-br from-accent/5 to-secondary/5 border border-accent/20 rounded-lg p-6 backdrop-blur-sm"
       >
         <h3 className="text-lg font-semibold text-accent mb-6">ROC Curve Analysis</h3>
-        <ResponsiveContainer width="100%" height={280}>
+        <ResponsiveContainer width="100%" height={200}>
           <LineChart data={rocData} margin={{ top: 20, right: 30, left: 0, bottom: 20 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="rgba(100, 150, 255, 0.1)" />
             <XAxis
@@ -156,7 +156,7 @@ export function MetricsVisualization({ isActive }: { isActive: boolean }) {
           <motion.div
             key={idx}
             variants={itemVariants}
-            className={`bg-gradient-to-br ${metric.color} border border-primary/30 rounded-lg p-4`}
+            className={`bg-linear-to-br ${metric.color} border border-primary/30 rounded-lg p-4`}
           >
             <p className="text-2xl mb-2">{metric.icon}</p>
             <p className="text-2xl font-bold text-primary mb-1">{metric.value}</p>
@@ -168,7 +168,7 @@ export function MetricsVisualization({ isActive }: { isActive: boolean }) {
       {/* Hardware Performance */}
       <motion.div
         variants={itemVariants}
-        className="bg-gradient-to-r from-secondary/10 to-primary/10 border border-secondary/30 rounded-lg p-6 backdrop-blur-sm"
+        className="bg-linear-to-r from-secondary/10 to-primary/10 border border-secondary/30 rounded-lg p-6 backdrop-blur-sm"
       >
         <h3 className="text-lg font-semibold text-secondary mb-4">Edge Device Performance (Raspberry Pi 4)</h3>
         <div className="grid grid-cols-4 gap-4">
